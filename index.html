@@ -2,113 +2,129 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>九九乘法表</title>
+    <title>Title</title>
     <style>
-        body {
-            color: #333;
+        table{
+            margin: auto;
         }
-        table {
-            width: 900px;
-            table-layout: fixed;
-            /*border-collapse: collapse;*/
-            empty-cells: hide;
+        #title td{
+            border: 1px solid #000000;
+            border-right: 0;
+            padding: 1px; background-color: black; color:white; font-weight:bold;
         }
-        td {
-            border: 1px solid #ccc;
-            padding: 10px;
+        #title td:last-child{
+            border-right: 1px solid #000000;
+            text-align: center;
+        }
+        td{
+            border: 1px solid #000000;
+            border-right: 0;
+            padding: 14px;
+            border-top: 0;
+        }
+        td:last-child{
+            border-right: 1px solid #000;
         }
     </style>
 </head>
 <body>
-    <h1>九九乘法表</h1>
-    <hr>
+<table cellspacing="0">
+    <tr id="title">
+        <td colspan="3"><bold>九九乘法表</bold></td>
+    </tr>
+    <tr>
+        <td>1 * 1 = 1<br>
+1 * 2 = 2<br>
+1 * 3 = 3<br>
+1 * 4 = 4<br>
+1 * 5 = 5<br>
+1 * 6 = 6<br>
+1 * 7 = 7<br>
+1 * 8 = 8<br>
+</td>
+<td>2 * 1 = 2<br>
+2 * 2 = 4<br>
+2 * 3 = 6<br>
+2 * 4 = 8<br>
+2 * 5 = 10<br>
+2 * 6 = 12<br>
+2 * 7 = 14<br>
+2 * 8 = 16<br>
+</td>
+<td>3 * 1 = 3<br>
+3 * 2 = 6<br>
+3 * 3 = 9<br>
+3 * 4 = 12<br>
+3 * 5 = 15<br>
+3 * 6 = 18<br>
+3 * 7 = 21<br>
+3 * 8 = 24<br>
+</td>
+       
+    </tr>
+    <tr>
 
+<td>4 * 1 = 4<br>
+4 * 2 = 8<br>
+4 * 3 = 12<br>
+4 * 4 = 16<br>
+4 * 5 = 20<br>
+4 * 6 = 24<br>
+4 * 7 = 28<br>
+4 * 8 = 32<br>
+</td>
 
-    <script>
-        //JavaScript生成九九乘法表
-        document.write('<table>');
+<td>5 * 1 = 5<br>
+5 * 2 = 10<br>
+5 * 3 = 15<br>
+5 * 4 = 20<br>
+5 * 5 = 25<br>
+5 * 6 = 30<br>
+5 * 7 = 35<br>
+5 * 8 = 40<br>
+</td>
 
-        //循环 输出tr 行
-        for (var i = 1; i <= 9; i ++) {
-            document.write('<tr>');
+<td>6 * 1 = 6<br>
+6 * 2 = 12<br>
+6 * 3 = 18<br>
+6 * 4 = 24<br>
+6 * 5 = 30<br>
+6 * 6 = 36<br>
+6 * 7 = 42<br>
+6 * 8 = 48<br>
+</td>
+        
+    </tr>
+    <tr>
+        <td>7 * 1 = 7<br>
+7 * 2 = 14<br>
+7 * 3 = 21<br>
+7 * 4 = 28<br>
+7 * 5 = 35<br>
+7 * 6 = 42<br>
+7 * 7 = 49<br>
+7 * 8 = 56<br>
+</td>
+        <td>8 * 1 = 8<br>
+8 * 2 = 16<br>
+8 * 3 = 24<br>
+8 * 4 = 32<br>
+8 * 5 = 40<br>
+8 * 6 = 48<br>
+8 * 7 = 56<br>
+8 * 8 = 64<br>
+</td>
+        <td>9 * 1 = 9<br>
+9 * 2 = 18<br>
+9 * 3 = 27<br>
+9 * 4 = 36<br>
+9 * 5 = 45<br>
+9 * 6 = 54<br>
+9 * 7 = 63<br>
+9 * 8 = 72<br>
+</td>
+    </tr>
 
-            //输出 td 单元格
-            for (var j = 1; j <= i; j ++) {
-                document.write(`<td>${i}×${j} = ${i * j}</td>`);
-            }
-            
-            document.write('</tr>');
-        }
-
-        document.write('</table>');
-
-        document.write('<br><br><br>');
-
-        document.write('<table>');
-
-        //循环 输出tr 行
-        for (var i = 9; i >= 1; i --) {
-            document.write('<tr>');
-
-            //输出 td 单元格
-            for (var j = 1; j <= i; j ++) {
-                document.write(`<td>${i}×${j} = ${i * j}</td>`);
-            }
-            
-            document.write('</tr>');
-        }
-
-        document.write('</table>');
-
-
-
-        document.write('<br><br><br>');
-
-        document.write('<table>');
-
-        //循环 输出tr 行
-        for (var i = 1; i <= 9; i ++) {
-            document.write('<tr>');
-            //输出空的单元格
-            for (var m = 1; m <= (9-i); m ++) {
-                document.write('<td></td>');
-            }
-            //输出 td 单元格
-            for (var j = 1; j <= i; j ++) {
-                document.write(`<td>${i}×${j} = ${i * j}</td>`);
-            }
-            
-            document.write('</tr>');
-        }
-
-        document.write('</table>');
-
-
-
-
-        document.write('<br><br><br>');
-
-        document.write('<table>');
-
-        //循环 输出tr 行
-        for (var i = 9; i >= 1; i --) {
-            document.write('<tr>');
-            //输出空的单元格
-            for (var m = 1; m <= (9-i); m ++) {
-                document.write('<td></td>');
-            }
-            //输出 td 单元格
-            for (var j = 1; j <= i; j ++) {
-                document.write(`<td>${i}×${j} = ${i * j}</td>`);
-            }
-            
-            document.write('</tr>');
-        }
-
-        document.write('</table>');
-
-    </script>
-
-
+</table>
 </body>
 </html>
